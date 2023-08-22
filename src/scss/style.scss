@@ -1,0 +1,143 @@
+$fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  .canvas {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    border: 2px solid black;
+  }
+  .toolbar {
+    width: 50px;
+    height: 100%;
+    background: #535353;
+    .tool {
+      height: 45px;
+      width: 50px;
+      border: 1px solid transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      background: #535353;
+      color: #dcdcdc;
+      border-radius: 5px;
+      transition: 0.2s;
+      &:hover {
+        border-radius: 5px;
+        background-color: #383838;
+        border-color: #636363;
+        transition: 0.2s;
+      }
+      &.active {
+        background-color: #383838;
+        border-color: #636363;
+      }
+      .fas {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .sideContainer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 30px;
+    .brushPanel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #535353;
+      height: 150px;
+      width: 100%;
+      position: relative;
+      padding: 20px;
+      margin-top: 10px;
+      gap: 20px;
+    }
+    .imgNav {
+      height: 150px;
+      width: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #535353;
+      margin-bottom: 50px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.container {
+  .toolbar .dl a#download {
+    color: #dcdcdc;
+  }
+  .brushPanel {
+    label {
+      color: #dcdcdc;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .brushSizeLabel {
+      font-size: 1.125rem;
+    }
+  }
+  .toolbar input.tool[type="color"] {
+    height: 45px;
+    width: 50px;
+    margin: auto;
+  }
+  .brushPanel {
+    input.brushSize[type="range"] {
+      width: 200px;
+      position: relative;
+    }
+    .brushSizePreviewContainer {
+      label.brushSizePreview {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #e53935;
+      }
+      background: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 50%;
+    }
+  }
+  .imgNav .navImg {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+  }
+}

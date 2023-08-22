@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/scss/style.scss" />
+    <script defer src="./src/js/index.js"></script>
+    <title>그림판</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="toolbar" id="toolbar">
+          <div class="tool brush" id="brush">
+              <i class="fas fa-paint-brush"></i>
+          </div>
+          <div class="tool eraser" id="eraser">
+              <i class="fas fa-eraser"></i>
+          </div>
+          <div class="tool undo" id="undo">
+              <i class="fas fa-undo"></i>
+          </div>
+          <div class="tool clear" id="clear">
+              <i class="fas fa-trash-alt"></i>
+          </div>
+          <div class="tool dl">
+              <a id="download"><i class="fas fa-download"></i></i></a>
+          </div>
+          <input class="tool colorSelector" id="colorPicker" type="color" value="#e53935">
+      </div>
+      <canvas class="canvas" id="canvas" width="1000px" height="600px"></canvas>
+      <div class="sideContainer">
+        <div class="imgNav" id="imgNav">
+          <img id="canvasImg" class="navImg" />
+        </div>
+        <label for="brushSize" class="brushSizeLabel">Brush Size</label>
+        <div class="brushPanel" id="brushPanel">
+          <div class="brushSizePreviewContainer">
+            <label for="brushSize" class="brushSizePreview" id="brushSizePreview"></label>
+          </div>
+          <input type="range" class="brushSize" id="brushSize" value="5" min="1" max="60">
+        </div>
+      </div>
+  </div>
+  </body>
+</html>
