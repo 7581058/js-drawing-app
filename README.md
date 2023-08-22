@@ -6,6 +6,8 @@
 
 ### 배포 링크
 
+https://warm-pasca-bc4122.netlify.app/
+
 ### 스택
 
 config  
